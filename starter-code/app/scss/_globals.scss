@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.container {
+    &--pall {
+        padding: 3rem 4.5rem;
+    }
+    &--pall-nav {
+        padding: 3rem 6rem 3rem 3rem;
+    }
+    &--py {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+    &--px {
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-jc-fe {
+        justify-content: flex-end;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-ai-fe {
+        align-items: flex-end;
+    }
+    &-fd-col {
+        flex-direction: column;
+    }
+    &-fd-row {
+        flex-direction: row;
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.hide-for-tablet {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.banner {
+    height: 100vh;
+    min-height: 600px;
+    background-position: center bottom;
+    background-size: cover;
+}
