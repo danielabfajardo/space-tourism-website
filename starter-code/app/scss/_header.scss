@@ -8,13 +8,16 @@
         align-self: center;
         right: 0;
 
-        @include breakpoint-down(medium) {
-            width: 80%;
-        }
+        @include breakpoint-down(medium) { width: 80%; }
     }
     &__logo { 
-        width: 48px;
-        height: 48px;  
+        width: 40px;
+        height: 40px; 
+        
+        @include breakpoint-up(medium) {
+            width: 48px;
+            height: 48px; 
+        }
     }
     &__line {
         width: 473px;
@@ -55,9 +58,7 @@
                 transition: all 500ms linear;
                 background-color: $grey;
             }
-            &:hover::before {
-                width: 70%;
-            }
+            &:hover::before { width: 70%; }
 
             @include breakpoint-up(large) {
                 &:hover::before {
@@ -68,53 +69,43 @@
         .chosen-btn::before {
             background-color: white;
             width: 60%;
-
-            @include breakpoint-up(large) {
-                width: 75%; 
-            }
+            @include breakpoint-up(large) { width: 75%; }
         }
         .hamburger {
-            > span {
-                display: block;
-                width: 24px;
-                height: 2px;
-                background-color: white;
-                transition: all 300ms ease-in-out;
-                transform-origin: 0% 50%;
-                margin-bottom: 6px;
-            }
+            @include breakpoint-up(medium) { opacity: 0; }
         }
-        &.open {
-            .hamburger {
-                > span:first-child {
-                  transform: rotate(45deg);
-                } 
-                > span:nth-child(2) {
-                  opacity: 0;
-                }
-                > span:last-child {
-                  transform: rotate(-45deg);
+    }
+    &.open {
+        .toggle {
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            position: absolute;
+            justify-content: flex-start;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            padding: 4rem 3rem;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(81.5485px);
+            
+            .close-menu {
+                margin-left: 11rem;
+            }
+            .menu-options {
+                flex-direction: column;
+                padding-top: 4rem;
+                font-family: $barlow-cond-font;
+                font-size: 16px;
+                letter-spacing: 2.7px;
+                a {
+                    text-transform: uppercase;
+                    padding-bottom: 2.5rem;
+                    color: white;
+                    text-align: left;
                 }
             }
         }
     }
-    /*&__toggle {
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        position: absolute;
-        width: 82%;
-        background: $grey;
-        padding: 7.8125rem;
-        top: 10rem;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 1.2rem;
-        a {
-            padding-bottom: 2.9rem;
-            color: red;
-            text-align: center;
-        }
-    }*/
 }
 

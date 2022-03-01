@@ -1,23 +1,21 @@
 //This Hamburger Menu animation snippet was creater by Coder Coder
-const btnHamburger = document.querySelector("#btnHamburger");
-const body = document.querySelector("body");
-const header = document.querySelector(".header__menu");
+const btnHamburgerOpen = document.querySelector("#btnHamburger__open");
+const btnHamburgerClose = document.querySelector("#btnHamburger__close");
+const header = document.querySelector(".header");
 const fadeElems = document.querySelectorAll(".has-fade");
 
-btnHamburger.addEventListener('click', function() {
-    if(header.classList.contains('open')) {
-        body.classList.remove('noscroll');
-        header.classList.remove('open');    
-        fadeElems.forEach(function(element){
-            element.classList.remove('fade-in');
-            element.classList.add('fade-out');
-        });
-    } else {
-        body.classList.add('noscroll');
-        header.classList.add('open');
-        fadeElems.forEach(function(element){
-            element.classList.remove('fade-out');
-            element.classList.add('fade-in');
-        });
-    }
+btnHamburgerOpen.addEventListener('click', function() {
+    fadeElems.forEach(function(element){
+        element.classList.remove('fade-out');
+        element.classList.add('fade-in');
+    }); 
+    header.classList.add('open');
+});
+
+btnHamburgerClose.addEventListener('click', function() {
+    fadeElems.forEach(function(element){
+        element.classList.remove('fade-in');
+        element.classList.add('fade-out');
+    });
+    //header.classList.remove('open');    
 });

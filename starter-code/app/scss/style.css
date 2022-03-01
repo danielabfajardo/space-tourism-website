@@ -33,7 +33,13 @@ a, a:visited, a:hover {
 }
 
 .container--pall-nav {
-  padding: 3rem 6rem 3rem 3rem;
+  padding: 3rem;
+}
+
+@media (min-width: 40em) {
+  .container--pall-nav {
+    padding: 3rem 6rem 3rem 3rem;
+  }
 }
 
 .container--py {
@@ -150,92 +156,55 @@ a, a:visited, a:hover {
 @-webkit-keyframes fade-in {
   from {
     visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
+    right: -50%;
   }
   to {
     visibility: visible;
-    opacity: 1;
+    right: 0%;
   }
 }
 
 @keyframes fade-in {
   from {
     visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
+    right: -50%;
   }
   to {
     visibility: visible;
-    opacity: 1;
+    right: 0%;
   }
 }
 
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
+  -webkit-animation: fade-in 250ms linear forwards;
+          animation: fade-in 250ms linear forwards;
 }
 
 @-webkit-keyframes fade-out {
   from {
     visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
+    right: 0%;
   }
   to {
     visibility: hidden;
-    opacity: 0;
+    right: -50%;
   }
 }
 
 @keyframes fade-out {
   from {
     visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
+    right: 0%;
   }
   to {
     visibility: hidden;
-    opacity: 0;
+    right: -50%;
   }
 }
 
 .fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
-}
-
-.header {
-  /*&__toggle {
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        position: absolute;
-        width: 82%;
-        background: $grey;
-        padding: 7.8125rem;
-        top: 10rem;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 1.2rem;
-        a {
-            padding-bottom: 2.9rem;
-            color: red;
-            text-align: center;
-        }
-    }*/
+  -webkit-animation: fade-out 250ms linear forwards;
+          animation: fade-out 250ms linear forwards;
 }
 
 .header .blur-box {
@@ -258,8 +227,15 @@ a, a:visited, a:hover {
 }
 
 .header__logo {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 40em) {
+  .header__logo {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .header__line {
@@ -330,30 +306,54 @@ a, a:visited, a:hover {
   }
 }
 
-.header__menu .hamburger > span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  margin-bottom: 6px;
+@media (min-width: 40em) {
+  .header__menu .hamburger {
+    opacity: 0;
+  }
 }
 
-.header__menu.open .hamburger > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.header.open .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  padding: 4rem 3rem;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(81.5485px);
+          backdrop-filter: blur(81.5485px);
 }
 
-.header__menu.open .hamburger > span:nth-child(2) {
-  opacity: 0;
+.header.open .toggle .close-menu {
+  margin-left: 11rem;
 }
 
-.header__menu.open .hamburger > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.header.open .toggle .menu-options {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+.header.open .toggle .menu-options a {
+  text-transform: uppercase;
+  padding-bottom: 2.5rem;
+  color: white;
+  text-align: left;
 }
 
 .banner {
@@ -422,6 +422,7 @@ a, a:visited, a:hover {
 @media (min-width: 64em) {
   .main .left .uptext {
     font-size: 28px;
+    letter-spacing: 4.72px;
   }
 }
 

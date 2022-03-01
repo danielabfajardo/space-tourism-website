@@ -29,7 +29,10 @@ a, a:visited, a:hover {
         padding: 3rem 4.5rem;
     }
     &--pall-nav {
-        padding: 3rem 6rem 3rem 3rem;
+        padding: 3rem;
+        @include breakpoint-up(medium) {
+            padding: 3rem 6rem 3rem 3rem;
+        }
     }
     &--py {
         padding-top: 7rem;

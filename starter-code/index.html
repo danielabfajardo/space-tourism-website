@@ -18,11 +18,22 @@
         <img class="header__logo" src="/assets/shared/logo.svg">
         <div class="header__line hide-for-tablet"></div>
         <nav class="header__menu flex">
-          <a href="#" id="btn-hamburger" class="header__toggle hide-for-desktop">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a href="#" id="btnHamburger__open" class="hamburger hide-for-desktop">
+            <img src="/assets/shared/icon-hamburger.svg" alt="Hamburger Menu"/>
           </a>
+          <div href="#" class="toggle has-fade hide-for-desktop hide-for-tablet">
+            <div class="close-menu">
+              <a href="#" id="btnHamburger__close" class="hamburger hide-for-desktop">
+                <img src="/assets/shared/icon-close.svg" alt="Hamburger Close"/>
+              </a>
+            </div>
+            <div class="menu-options flex">
+              <a href="/index.html"><strong>00</strong> Home</a>
+              <a href="#"><strong>01</strong> Destinations</a>
+              <a href="#"><strong>02</strong> Crew</a>
+              <a href="#"><strong>03</strong> Technology</a>
+            </div>
+          </div>
           <div class="options flex chosen-btn hide-for-mobile">
             <span class="options__num hide-for-tablet">00</span>
             <a href="/index.html" class="options__title">Home</a>
@@ -40,11 +51,7 @@
             <a href="#" class="options__title">Technology</a>
           </div>
           <div class="blur-box hide-for-mobile"></div>
-          <a href="#" id="btnHamburger" class="hamburger hide-for-desktop">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
+
         </nav>
       </header>
 
