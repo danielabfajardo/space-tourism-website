@@ -59,11 +59,12 @@
             font-size: 15px;
             line-height: 25px;
             color: #D0D6F9;
-            width: 444px;
+            width: 327px;
 
             @include breakpoint-up(medium) {
                 font-size: 16px;
                 line-height: 32px;
+                width: 444px;
             }
 
             @include breakpoint-up(large) {

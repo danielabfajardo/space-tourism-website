@@ -325,7 +325,7 @@ a, a:visited, a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 50%;
+  width: 60%;
   height: 100%;
   top: 0;
   padding: 4rem 3rem;
@@ -335,7 +335,7 @@ a, a:visited, a:hover {
 }
 
 .header.open .toggle .close-menu {
-  margin-left: 11rem;
+  margin-left: 8rem;
 }
 
 .header.open .toggle .menu-options {
@@ -445,13 +445,14 @@ a, a:visited, a:hover {
   font-size: 15px;
   line-height: 25px;
   color: #D0D6F9;
-  width: 444px;
+  width: 327px;
 }
 
 @media (min-width: 40em) {
   .main .left .downtext {
     font-size: 16px;
     line-height: 32px;
+    width: 444px;
   }
 }
 
