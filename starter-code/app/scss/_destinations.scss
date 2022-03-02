@@ -1,0 +1,189 @@
+.main2 {
+    flex-direction: column;
+    @include breakpoint-up(large) {
+        padding: 1rem 4.5rem;
+    }
+
+    &__upper {
+        padding: 0.5rem 2rem;
+        margin: 0 auto;
+
+        @include breakpoint-up(medium) {
+            padding: 0rem 1rem;
+            margin: 0;
+        }
+        @include breakpoint-up(large) {
+            padding: 0rem 0rem;
+        }
+
+        .uptitle {
+            font-family: $barlow-cond-font;
+            font-size: 16px;
+            letter-spacing: 2.7px;
+            text-transform: uppercase;
+
+            &__num {
+                color: grey;
+                font-weight: bold;
+                margin-right: 1rem;
+            }
+            &__text {
+                color: white;
+            }
+
+            @include breakpoint-up(medium) {
+                font-size: 20px;
+                letter-spacing: 3.38px;
+                padding: 2.5rem 3rem;
+            }
+
+            @include breakpoint-up(large) {
+                font-size: 28px;
+                letter-spacing: 4.72px;
+            }
+        }
+    }
+
+    &__down {
+        margin-bottom: 3rem;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            text-align: left;
+        }
+        .left {
+            width: 50%;
+            padding: 1rem 0rem;
+            &__moon {
+                animation-name: spin;
+                animation-duration: 70000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+                img {
+                    width: 170px;
+                    height: 170px;
+
+                    @include breakpoint-up(medium) {
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    @include breakpoint-up(large) {
+                        width: 445px;
+                        height: 445px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex-direction: column;
+            align-items: center;
+            @include breakpoint-up(large) {
+                padding-left: 4rem;
+                align-items: flex-start;
+            }
+            .menu {
+                margin-top: 2rem;
+                @include breakpoint-up(large) {
+                    margin-top: -4rem;
+                }
+                .options {
+                    font-family: $barlow-cond-font;
+                    font-size: 16px;
+                    letter-spacing: 2.7px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    position: relative;
+
+                    &__title {
+                        color: $grey;
+                        margin-right: 2rem;
+                    }
+                    &::before {
+                        content: "";
+                        width: 0%;
+                        height: 3px;
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 0;
+                        transition: all 500ms linear;
+                        background-color: $grey;
+                    }
+                    &:hover::before { width: 60%; }
+                }
+                .chosen-btn::before {
+                    background-color: white;
+                    width: 60%;
+                }
+            }
+            .midtext {
+                font-family: $bellefair-font;
+                font-size: 56px;
+                color: white;
+                text-transform: uppercase;
+                margin: 3rem 0px 0px 0px;
+
+                @include breakpoint-up(medium) {
+                    font-size: 80px;
+                }
+
+                @include breakpoint-up(large) {
+                    font-size: 100px;
+                }
+            }
+            .downtext {
+                font-family: $barlow-font;
+                font-size: 15px;
+                line-height: 25px;
+                color: #D0D6F9;
+                width: 327px;
+
+                @include breakpoint-up(medium) {
+                    font-size: 16px;
+                    line-height: 28px;
+                    width: 573px;
+                }
+
+                @include breakpoint-up(large) {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+            .line {
+                height: 1px;
+                width: 100%;
+                background-color: $grey;
+                opacity: 0.5;
+                margin: 2rem 0rem;
+            }
+            .data {
+                gap: 2rem;
+                text-transform: uppercase;
+                flex-direction: column;
+
+                @include breakpoint-up(medium) {
+                    flex-direction: row;
+                    gap: 5rem;
+                }
+            
+                &__title {
+                    color: $grey;
+                    font-size: 14px;
+                    font-family: $barlow-cond-font;
+                    letter-spacing: 2.36px;
+                    margin-bottom: 0.8rem;
+                }
+                &__num {
+                    color: white;
+                    font-size: 28px;
+                    font-family: $bellefair-font;
+                }
+            }
+        }
+    }
+}

@@ -3,35 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300&family=Barlow:wght@100;400;600&family=Bellefair&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="/app/scss/style.css">
+
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="banner2">
+      <header class="header container--pall-nav flex flex-ai-c flex-jc-sb">
+        <img class="header__logo" src="/assets/shared/logo.svg">
+        <div class="header__line hide-for-tablet"></div>
+        <nav class="header__menu flex">
+          <a href="#" id="btnHamburger__open" class="hamburger hide-for-desktop">
+            <img src="/assets/shared/icon-hamburger.svg" alt="Hamburger Menu"/>
+          </a>
+          <div href="#" class="toggle has-fade hide-for-desktop hide-for-tablet">
+            <div class="close-menu">
+              <a href="#" id="btnHamburger__close" class="hamburger hide-for-desktop">
+                <img src="/assets/shared/icon-close.svg" alt="Hamburger Close"/>
+              </a>
+            </div>
+            <div class="menu-options flex">
+              <a href="/index.html"><strong>00</strong> Home</a>
+              <a href="/destination-moon.html"><strong>01</strong> Destinations</a>
+              <a href="/crew-commander.html"><strong>02</strong> Crew</a>
+              <a href="/technology-vehicle.html"><strong>03</strong> Technology</a>
+            </div>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">00</span>
+            <a href="/index.html" class="options__title">Home</a>
+          </div>
+          <div class="options flex chosen-btn hide-for-mobile">
+            <span class="options__num hide-for-tablet">01</span>
+            <a href="/destination-moon.html" class="options__title">Destinations</a>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">02</span>
+            <a href="/crew-commander.html" class="options__title">Crew</a>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">03</span>
+            <a href="/technology-vehicle.html" class="options__title">Technology</a>
+          </div>
+          <div class="blur-box hide-for-mobile"></div>
+        </nav>
+      </header>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Mars
-
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
-
-  Avg. distance
-  225 mil. km
-
-  Est. travel time
-  9 months
+      <div class="main2 flex">
+        <div class="main2__upper">
+          <div class="uptitle flex">
+            <span class="uptitle__num">01</span>
+            <span class="uptitle__text">Pick your destination</span>
+          </div>
+        </div>
+        <div class="main2__down flex">
+          <div class="left flex flex-jc-c">
+            <div class="left__moon">
+              <img src="/assets/destination/image-mars.png" alt="Mars"/>
+            </div>
+          </div>
+          <div class="right flex">
+            <div class="menu flex">
+              <div class="options">
+                <a href="/destination-moon.html" class="options__title">Moon</a>
+              </div>
+              <div class="options chosen-btn">
+                <a href="/destination-mars.html" class="options__title">Mars</a>
+              </div>
+              <div class="options">
+                <a href="/destination-europa.html" class="options__title">Europa</a>
+              </div>
+              <div class="options">
+                <a href="/destination-titan.html" class="options__title">Titan</a>
+              </div>
+            </div>
+            <h1 class="midtext">Mars</h1>
+            <p class="downtext">
+              Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, 
+              the tallest planetary mountain in our solar system. It's two and a half times 
+              the size of Everest!
+            </p>
+            <div class="line"></div>
+            <div class="data flex flex-ai-c">
+              <div>
+                <div class="data__title">Avg. distance</div>
+                <div class="data__num">225 mil. km</div>
+              </div>
+              <div>
+                <div class="data__title">Est. travel time</div>
+                <div class="data__num">9 months</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/app/js/script.js"></script>
 </body>
 </html>

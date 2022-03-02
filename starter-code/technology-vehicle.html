@@ -3,30 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300&family=Barlow:wght@100;400;600&family=Bellefair&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="/app/scss/style.css">
+
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="banner4">
+      <header class="header container--pall-nav flex flex-ai-c flex-jc-sb">
+        <img class="header__logo" src="/assets/shared/logo.svg">
+        <div class="header__line hide-for-tablet"></div>
+        <nav class="header__menu flex">
+          <a href="#" id="btnHamburger__open" class="hamburger hide-for-desktop">
+            <img src="/assets/shared/icon-hamburger.svg" alt="Hamburger Menu"/>
+          </a>
+          <div href="#" class="toggle has-fade hide-for-desktop hide-for-tablet">
+            <div class="close-menu">
+              <a href="#" id="btnHamburger__close" class="hamburger hide-for-desktop">
+                <img src="/assets/shared/icon-close.svg" alt="Hamburger Close"/>
+              </a>
+            </div>
+            <div class="menu-options flex">
+              <a href="/index.html"><strong>00</strong> Home</a>
+              <a href="/destination-moon.html"><strong>01</strong> Destinations</a>
+              <a href="/crew-commander.html"><strong>02</strong> Crew</a>
+              <a href="#"><strong>03</strong> Technology</a>
+            </div>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">00</span>
+            <a href="/index.html" class="options__title">Home</a>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">01</span>
+            <a href="/destination-moon.html" class="options__title">Destinations</a>
+          </div>
+          <div class="options flex hide-for-mobile">
+            <span class="options__num hide-for-tablet">02</span>
+            <a href="/crew-commander.html" class="options__title">Crew</a>
+          </div>
+          <div class="options flex chosen-btn hide-for-mobile">
+            <span class="options__num hide-for-tablet">03</span>
+            <a href="#" class="options__title">Technology</a>
+          </div>
+          <div class="blur-box hide-for-mobile"></div>
+        </nav>
+      </header>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Launch vehicle
-
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+      <div class="main4 flex">
+        <div class="main4__upper">
+          <div class="uptitle flex">
+            <span class="uptitle__num">03</span>
+            <span class="uptitle__text">Space launch 101</span>
+          </div>
+        </div>
+        <div class="main4__down flex">
+          <div class="left flex flex-jc-fs">
+            <div class="menu flex">
+              <a href="/technology-vehicle.html" class="btn-chosen flex flex-ai-c flex-jc-c">
+                <span>1</span>
+              </a>
+              <a href="/technology-spaceport.html" class="flex flex-ai-c flex-jc-c">
+                <span>2</span>
+              </a>
+              <a href="/technology-capsule.html" class="flex flex-ai-c flex-jc-c">
+                <span>3</span>
+              </a>
+            </div>
+            <div class="left__information flex">
+              <h3 class="uptext">The terminology...</h3>
+              <h1 class="midtext">Launch vehicle</h1>
+              <p class="downtext">
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+                payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+                WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+                it's quite an awe-inspiring sight on the launch pad!
+              </p>
+            </div>
+          </div>
+          <div class="right flex flex-jc-c">
+            <div class="right__tech tech__img1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/app/js/script.js"></script>
 </body>
 </html>
+
+
+  
+
+  

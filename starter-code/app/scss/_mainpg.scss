@@ -1,32 +1,17 @@
-.banner {
-    flex: 1;
-
-    @include breakpoint-down(small) {
-        background-image: url('/assets/home/background-home-mobile.jpg');
-    }
-
-    @include breakpoint-down(medium) {
-        background-image: url('/assets/home/background-home-tablet.jpg');
-    }
-
-    @include breakpoint-up(large) {
-        background-image: url('/assets/home/background-home-desktop.jpg');     
-    }
-}
-
 .main {
-    flex: 4;
     flex-direction: column;
     text-align: center;
 
+    @include breakpoint-down(medium) {
+        padding-bottom: 3rem;
+    }
     @include breakpoint-up(large) {
         flex-direction: row;
         text-align: left;
+        padding: 1rem 4.5rem;
     }
 
     .left {
-        color: white;
-        
         .uptext {
             font-family: $barlow-cond-font;
             font-size: 16px;
@@ -74,6 +59,7 @@
     }
 
     .right {
+        //margin-bottom: 2rem;
         @include breakpoint-up(large) {
             padding-right: 7%;
         }
